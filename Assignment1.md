@@ -10,10 +10,10 @@ set -e
 # Extract unique groups from users.csv and create them if they don't exist
 
 ```
-   cut -d',' -f2 users.csv | sort -u | while read group; do`
-    if ! getent group "$group" > /dev/null; then`
-   echo "Creating group $group"`
-    groupadd "$group"`
+   cut -d',' -f2 users.csv | sort -u | while read group; do
+    if ! getent group "$group" > /dev/null; then
+   echo "Creating group $group"
+    groupadd "$group"
    fi
    done
 ```
