@@ -1,3 +1,4 @@
+# Tells the script to exit immediately if any command fails. This prevents further steps from running on error.
 ```
 #!/bin/bash'
 set -e
