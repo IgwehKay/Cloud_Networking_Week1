@@ -37,3 +37,5 @@ while IFS=',' read -r username group; do
   echo "User $username added to group $group."
 done < users.csv
 ```
+#Result
+![image](https://github.com/user-attachments/assets/cc6cb2a3-dc0f-4307-a099-3728f9e1c992)
