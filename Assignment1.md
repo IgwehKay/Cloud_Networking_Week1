@@ -1,15 +1,15 @@
 
-`#!/bin/bash
-set -e`
+`#!/bin/bash'
+`set -e`
 
 # Extract unique groups from users.csv and create them if they don't exist
 
-`cut -d',' -f2 users.csv | sort -u | while read group; do
-  if ! getent group "$group" > /dev/null; then
-    echo "Creating group $group"
-    groupadd "$group"
-  fi
-done`
+`cut -d',' -f2 users.csv | sort -u | while read group; do`
+`  if ! getent group "$group" > /dev/null; then`
+   ` echo "Creating group $group"`
+   ` groupadd "$group"`
+`  fi`
+`done`
 
 # Read each line of users.csv
 
