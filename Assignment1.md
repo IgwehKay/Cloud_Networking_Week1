@@ -3,6 +3,7 @@
 set -e`
 
 # Extract unique groups from users.csv and create them if they don't exist
+
 `cut -d',' -f2 users.csv | sort -u | while read group; do
   if ! getent group "$group" > /dev/null; then
     echo "Creating group $group"
@@ -11,6 +12,7 @@ set -e`
 done`
 
 # Read each line of users.csv
+
 `while IFS=',' read -r username group; do
   # Create the user without specifying the group (use default group)
   if ! id "$username" &>/dev/null; then
@@ -22,6 +24,7 @@ done`
   fi`
 
   # Add user to the group as a secondary group
+  
   `usermod -aG "$group" "$username"
   echo "User $username added to group $group."
 done < users.csv
