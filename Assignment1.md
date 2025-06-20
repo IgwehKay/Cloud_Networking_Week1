@@ -1,4 +1,4 @@
-# Write a basch script that create 20 users from a csv file with default password.
+# Write a bash script that create 20 users from a csv file with default password.
 
 10 users to sys-admin group
 5 users to data-admin group
